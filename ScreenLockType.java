@@ -45,7 +45,10 @@ public enum ScreenLockType {
 			"unlock_set_password"),
 	MANAGED(
 			DevicePolicyManager.PASSWORD_QUALITY_MANAGED,
-			"unlock_set_managed");
+			"unlock_set_managed"),
+	DEVTITANS(
+			DevicePolicyManager.DEV_TITANS,
+			"unlock_set_devtitans");
 
 	/**
 	 * The default quality of the type of lock used. For example, in the case of
@@ -99,6 +102,8 @@ public enum ScreenLockType {
 				return ScreenLockType.MANAGED;
 			case DevicePolicyManager.PASSWORD_QUALITY_UNSPECIFIED:
 				return ScreenLockType.SWIPE;
+			case DevicePolicyManager.DEV_TITANS:
+				return ScreenLockType.DEVTITANS;
 		}
 		return null;
 	}
